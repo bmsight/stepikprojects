@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!-- 
+
+Комментарии к вёрстке:
+
+- Страница умышленно свёрстана в ширине макета 1440px, для тренировки подгонки пропорций по макету.
+Границы стилизовал тенью. Для фулскрина меняется ширина "1440px" на "100%" в body.
+
+Из "фишечек":
+
+1. Полный адаптив на медиа-запросах и flexbox'е. Вплоть до устройств с 360px шириной.
+2. Анимация логотипа, меню навигации, блоков блога и кнопки подписки.
+3. Визуализация инпутов в активном режиме (например если перемещение по элементам осуществляется кнопкой TAB).
+4. Плавный скроллинг из меню навигации к блокам.
+
+Валидатор не ругается. БЭМ и семантику как мог соблюдал)
+
+Верстал попутно изучая - три вечера: Andrey B.M.Sight (vk.com/whyrm - если вопросы будут, отвечу) -->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <title>Coffee House</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <nav class="menu">
+        <a href="#" class="menu__logo">Coffee House</a>
+        <ul class="menu__ul">
+          <li class="menu__li"><a href="#home_scroll" class="menu__link">Home</a></li>
+          <li class="menu__li"><a href="#story_scroll" class="menu__link">Story</a></li>
+          <li class="menu__li"><a href="#blog_scroll" class="menu__link">Blog</a></li>
+          <li class="menu__li"><a href="#subscribe_scroll" class="menu__link">Subscribe</a></li>
+        </ul>
+      </nav>
+      <div class="home" id="home_scroll">
+        <div class="home__bgr">
+          <h1 class="home__title">Take Your Time</h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <article class="main__story" id="story_scroll">
+        <h2 class="main__title">Story</h2>
+        <div class="main__body">
+          <img class="main__img" src="story_img.jpg" alt="Девушка заваривает чифирок">
+          <p class="main__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu quis
+            cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent mattis
+            ultrices est, congue ullamcorper erat bibendum pulvinar. In accumsan dapibus accumsan. Maecenas semper est
+            ut nunc feugiat, vel ultrices ligula commodo. Donec eget pulvinar nunc, eget pharetra risus.</p>
+        </div>
+      </article>
+      <section class="main__blog" id="blog_scroll">
+        <h2 class="main__title">Blog</h2>
+        <div class="main__boxline">
+          <div class="main__boxcont">
+            <h3 class="main__subtitle">Daily Coffee News</h3>
+            <img src="blog_box_1.jpg" alt="Вкусный кофе - раз" class="main__imgprev">
+            <p class="main__txtprev">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu
+              quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend
+              euismod.</p>
+          </div>
+          <div class="main__boxcont">
+            <h3 class="main__subtitle">Dutch Coffee Chains</h3>
+            <img src="blog_box_2.jpg" alt="Вкусный кофе - два" class="main__imgprev">
+            <p class="main__txtprev">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu
+              quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend
+              euismod.</p>
+          </div>
+          <div class="main__boxcont">
+            <h3 class="main__subtitle">Start Up In Minneapolis</h3>
+            <img src="blog_box_3.jpg" alt="Вкусный кофе - три" class="main__imgprev">
+            <p class="main__txtprev">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu
+              quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend
+              euismod.</p>
+          </div>
+        </div>
+      </section>
+      <div class="main__subscribe" id="subscribe_scroll">
+        <form class="main__form">
+          <label class="main__titlesubs">Subscribe</label>
+          <input class="main__mailinput" id="email" type="text" name="email" placeholder="enter your email">
+          <input class="main__submitbtn" type="submit" value="Submit">
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__copyright">© COPYRIGHT 2021</span>
+    </footer>
+
+  </div>
+</body>
+
+</html>
